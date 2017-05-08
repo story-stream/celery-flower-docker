@@ -4,17 +4,15 @@ Docker container for monitoring celery
 ## Running with docker
 
 In order to run flower using  docker , run
-command: 
+command:
 
 ```
-sudo docker run -it --rm --name flower -p 5555:5555 totem/celery-flower-docker
+sudo docker run -it --rm --name flower -p 5555:5555 storystream/celery-flower-docker
 ```
 
 ## Access Flower
 
 To access flower go to url:  [http://172.17.42.1:5555](http://172.17.42.1:5555).
-The default credentials for the flower instance is username:root  password:changeit.
-(It is highly recommended to change the default credentials. See run configuration.)
 
 If your are using dynamic port mapping using (-P), inspect the container to determine the mapped
 port for 5555.
@@ -32,4 +30,3 @@ port for 5555.
 | AMQP_ADMIN_HOST | Rabbitmq admin host | 172.17.42.1 |
 | AMQP_ADMIN_PORT | Rabbitmq admin port | 15672 |
 | FLOWER_MAX_TASKS | Max tasks to be stored in memory. | 3600 |
-| FLOWER_BASIC_AUTH | Authentication for flower (username:passowrd) | root:changeit |
