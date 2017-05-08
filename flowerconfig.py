@@ -15,6 +15,6 @@ port = int(os.getenv('FLOWER_PORT', '5555'))
 broker_api = os.getenv('FLOWER_BROKER_API', DEFAULT_BROKER_API)
 max_tasks = int(os.getenv('FLOWER_MAX_TASKS', '3600'))
 
-if not os.getenv('FLOWER_DISABLE_AUTH'):
+if not os.getenv('DISABLE_AUTH'):
     basic_auth = [os.getenv('FLOWER_BASIC_AUTH', '%s:%s'
                             % (USERNAME, PASSWORD))]
